@@ -1,0 +1,12 @@
+<h1>Edit Hobby</h1>
+<%= form_with(model: @hobby, local: true) do |h| %>
+  <div class="field">
+    <%= h.label :name %>
+    <%= h.text_field :name, required: true, placeholder: "Name" %>
+  </div>
+  <div class="field">
+    <%= h.label :body %>
+    <%= h.text_area :body %>
+  </div>
+  <%= h.submit class: "waves-effect waves-light btn teal accent-3"%>
+<% end %>
